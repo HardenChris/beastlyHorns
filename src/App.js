@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Footer from './components/Footer.js';
 import Headers from './components/Header.js';
+import HornForm from './components/HornForm.js';
 import Mains from './components/Main.js';
 import SelectedBeast from './components/SelectedBeast.js';
+import data from './assets/data.json'
 
 export default class App extends Component {
 
@@ -12,6 +14,10 @@ export default class App extends Component {
       show: false,
       featBeast: {}
     }
+  }
+
+  displayHorn = (data) => {
+    this.setState ({beastData: data })
   }
 
   newModalBeast = (beast) => {
@@ -40,6 +46,7 @@ export default class App extends Component {
       <div>
         'hello'
         <Headers />
+        <HornForm data={data} displayHorn={this.displayHorn} />
         <Mains newModalBeast={this.newModalBeast} />
         <Footer />
         <SelectedBeast featBeast={this.state.featBeast} closeModal={this.closeModal} show={this.state.show}/>
