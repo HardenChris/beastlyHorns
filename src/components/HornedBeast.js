@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap';
 import Button from '@restart/ui/esm/Button';
 
 
-export default class HornedBeasts extends Component {
+export default class HornedBeast extends React.Component {
 
     constructor(props) {
         super(props);
@@ -24,7 +24,7 @@ export default class HornedBeasts extends Component {
             <h2>
                 <Card bg='secondary' text='white' id='pocketMonsterCard' style={{width: '18rem'}}>
                     <Card.Title>{this.props.beast.Title}</Card.Title>
-                    <Card.Img variant="top" src={this.props.beast.imagage_url} alt={this.props.beast.description}/>
+                    <Card.Img variant="top" src={this.props.beast.image_url} alt={this.props.beast.description}/>
                     <Card.Body>
                         <Card.Text>
                             {this.props.beast.description}

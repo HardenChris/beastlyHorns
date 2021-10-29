@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 
 
-class Foot extends Component {
+class Footer extends Component {
     render () {
         return (
             <Navbar bg="dark" variant="dark" expand="lg" >
@@ -16,4 +16,4 @@ class Foot extends Component {
     }
 }
 
-export default Foot;
+export default Footer;

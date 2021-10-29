@@ -1,16 +1,20 @@
 import React from 'react';
 import { Component } from 'react';
+import { Container } from 'react-bootstrap';
 import BeastInfo from '../assets/data.json'
-import HornedBeasts from './HornedBeast';
+import HornedBeast from './HornedBeast';
+import { Row } from 'react-bootstrap';
 
 
-export default class Mains extends Component {
+export default class Mains extends React.Component {
     render () {
-        let beastBoy = BeastInfo.map(beast => <HornedBeasts beast={beast}/>)
+        let beastBoy = BeastInfo.map(beast => <HornedBeast beast={beast}/>)
         return(
-                <Component>
+                <Container>
+                    <Row xs={1} sm={2} md={3} lg={4}>
                     {beastBoy}
-                </Component>
+                    </Row>
+                </Container>
         )
     }
 }
