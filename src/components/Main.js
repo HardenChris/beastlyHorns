@@ -8,7 +8,7 @@ import { Row } from 'react-bootstrap';
 
 export default class Mains extends React.Component {
     render () {
-        let beastBoy = BeastInfo.map(beast => <HornedBeast beast={beast}/>)
+        let beastBoy = BeastInfo.map(beast => <HornedBeast newModalBeast={this.props.newModalBeast} beast={beast}/>)
         return(
                 <Container>
                     <Row xs={1} sm={2} md={3} lg={4}>
