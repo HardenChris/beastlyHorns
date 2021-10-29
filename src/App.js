@@ -46,7 +46,7 @@ export default class App extends Component {
       <div>
         'hello'
         <Headers />
-        <HornForm data={data} displayHorn={this.displayHorn} />
+        {/* <HornForm data={data} displayHorn={this.displayHorn} /> */}
         <Mains newModalBeast={this.newModalBeast} />
         <Footer />
         <SelectedBeast featBeast={this.state.featBeast} closeModal={this.closeModal} show={this.state.show}/>
