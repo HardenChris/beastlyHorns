@@ -33,6 +33,8 @@ export default class HornedBeast extends React.Component {
                         <Card.Title>{this.props.beast.title}</Card.Title>
                         <Card.Text>
                             {this.props.beast.description}
+                            {"\n"}
+                            Horns:'{this.props.beast.horns}'
                         </Card.Text>
                         <Button variant='primary' onClick={this.handleClick}>{this.state.likes}</Button>
                     </Card.Body>
