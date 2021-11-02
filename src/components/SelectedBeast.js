@@ -4,15 +4,11 @@ import { Container } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
-
 export default class SelectedBeast extends Component {
 
     handleClose = () => {
         this.props.closeModal();
     }
-
-
-
 
     render() {
         return (

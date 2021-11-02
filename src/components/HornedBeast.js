@@ -2,7 +2,6 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
-
 export default class HornedBeast extends React.Component {
 
     constructor(props) {

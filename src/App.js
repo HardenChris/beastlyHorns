@@ -17,7 +17,6 @@ export default class App extends Component {
     }
   }
 
-
   userSelection = (numberOfHorns) => {
     const filteredArray = allBeastsArray.filter(
       (singleBeast) => {return singleBeast.horns === numberOfHorns || numberOfHorns === -1} 
@@ -38,7 +37,6 @@ export default class App extends Component {
      show: false 
     })
   }
-
 
   openModal = () => {
     this.setState ({

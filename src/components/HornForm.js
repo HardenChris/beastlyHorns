@@ -2,16 +2,13 @@ import React from 'react';
 import { Component } from 'react';
 import { Form, ListGroup } from 'react-bootstrap';
 
-
 export default class HornForm extends Component {
-
    
    handleChange = (event) => {
        const selection = Number(event.target.value);
     this.props.userSelection(selection); 
        
     }
-   
 
     render () {
         return (
