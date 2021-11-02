@@ -4,7 +4,7 @@ import Headers from './components/Header.js';
 import HornForm from './components/HornForm.js';
 import Mains from './components/Main.js';
 import SelectedBeast from './components/SelectedBeast.js';
-import data from './assets/data.json'
+import allBeastsArray from './assets/data.json'
 
 export default class App extends Component {
 
@@ -12,12 +12,17 @@ export default class App extends Component {
     super(props);
     this.state = {
       show: false,
-      featBeast: {}
+      featBeast: {},
+      displayedBeastsArray: allBeastsArray
     }
   }
 
-  displayHorn = (data) => {
-    this.setState ({beastData: data })
+
+  userSelection = (numberOfHorns) => {
+    const filteredArray = allBeastsArray.filter(
+      (singleBeast) => {return singleBeast.horns === numberOfHorns || numberOfHorns === -1} 
+    )
+    this.setState({displayedBeastsArray:filteredArray}) 
   }
 
   newModalBeast = (beast) => {
@@ -44,10 +49,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        'hello'
         <Headers />
-        {/* <HornForm data={data} displayHorn={this.displayHorn} /> */}
-        <Mains newModalBeast={this.newModalBeast} />
+        <HornForm userSelection={this.userSelection}/>
+        <Mains newModalBeast={this.newModalBeast} beastAll={this.state.displayedBeastsArray}/>
         <Footer />
         <SelectedBeast featBeast={this.state.featBeast} closeModal={this.closeModal} show={this.state.show}/>
       </div>

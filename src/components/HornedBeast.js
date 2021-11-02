@@ -27,7 +27,7 @@ export default class HornedBeast extends React.Component {
     render() {
         return (
             <h2>
-                <Card bg='secondary' text='white' id='pocketMonsterCard' style={{width: '18rem'}}>
+                <Card bg='secondary' text='white' style={{width: '18rem'}}>
                     <Card.Img variant="top" src={this.props.beast.image_url} alt={this.props.beast.description} onClick={this.handleImgClick} />
                     <Card.Body>
                         <Card.Title>{this.props.beast.title}</Card.Title>
